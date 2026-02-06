@@ -5,7 +5,7 @@ const User = require("../models/user");
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "/auth/google/callback"
+    callbackURL: "https://o-auth-project.onrender.com/auth/google/callback"
   },
 
   //happens after the google logs in the user

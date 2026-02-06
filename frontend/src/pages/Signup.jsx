@@ -134,7 +134,7 @@ const onSubmit = async (data) => {
 
         <button 
           onClick={()=>(
-          window.location.href = "http://localhost:3000/auth/google"
+          window.location.href = "https://o-auth-project.onrender.com/auth/google"
           )}
                   
         className="w-full flex items-center justify-center gap-3 bg-white text-black py-2 rounded-md mt-2 hover:bg-gray-300">
