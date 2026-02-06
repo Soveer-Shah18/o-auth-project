@@ -31,13 +31,18 @@ authRouter.get("/google/callback",
     const user = req.user;
 
     const token = jwt.sign(
-      {_id: user._id,
+      { _id: user._id,
         emailId: user.emailId,
         firstName: user.firstName,
       },
       process.env.JWT_KEY,
       {expiresIn: "15m"})
 
+      res.clearCookie("token", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+    });
 
       res.cookie("token", token, {
         httpOnly: true,
