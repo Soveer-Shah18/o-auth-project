@@ -41,12 +41,12 @@ authRouter.get("/google/callback",
 
       res.cookie("token", token, {
         httpOnly: true,
-        secure: false,
-        sameSite: "lax",
+        secure: true,
+        sameSite: "none",
         maxAge: 15 * 60 * 1000
       })
 
-      res.redirect("http://localhost:5173/homepage")
+      res.redirect("https://o-auth-project-theta.vercel.app/homepage")
   }
 )
 

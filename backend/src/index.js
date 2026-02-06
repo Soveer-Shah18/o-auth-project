@@ -9,7 +9,9 @@ const cors = require('cors')
 const passport = require("./config/passport")
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173',
+       "https://o-auth-project-theta.vercel.app"
+    ],
     credentials: true 
 }))
 
